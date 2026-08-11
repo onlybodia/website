@@ -15,26 +15,21 @@ body {
   background: #160f0a;
 }
 
-.site-logo {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 800px;
-  height: 800px;
-  object-fit: contain;
-  z-index: 10;
-}
-
 /* ---------------------------------------------------
    Hero section — full image, letterboxed, never cropped
 --------------------------------------------------- */
 .hero {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   width: 100%;
-  background: #160f0a;
+  background-color: #160f0a;
+  background-image: url("../images/bf-logo.png");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 400px 400px;
 }
 
 .hero__image {
