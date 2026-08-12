@@ -111,8 +111,8 @@ body {
   -webkit-background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
-  animation: quote-shimmer 2.6s ease-in-out infinite;
-  animation-delay: calc(var(--i) * 0.03s);
+  animation: quote-shimmer 3.38s ease-in-out infinite;
+  animation-delay: calc(var(--i) * 0.039s);
 }
 
 @keyframes golden-glow {
@@ -171,7 +171,7 @@ body {
   display: block;
   width: clamp(7rem, 16vw, 11rem);
   height: auto;
-  animation: golden-glow 2.6s ease-in-out infinite;
+  animation: golden-glow 3.38s ease-in-out infinite;
 }
 
 @media (max-width: 768px) {
