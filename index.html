@@ -6,15 +6,55 @@
 <title>BF</title>
 <meta name="description" content="Highly motivated and entrepreneurial professional with a strong track record in management, business development, and team leadership.">
 <link rel="preload" as="image" href="images/hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <main
-    class="hero"
-    role="img"
-    aria-label="A warm wood-paneled study with a leather desk chair, bookshelves, vintage maps, a globe, and a letter on a polished desk beside a fountain pen and lamp."
-  ></main>
+  <main class="hero">
+    <blockquote class="quote">
+      <p class="quote__text">
+        <span class="quote__line" id="quote-line-1"></span>
+        <span class="quote__line" id="quote-line-2"></span>
+      </p>
+      <cite class="quote__author" id="quote-author"></cite>
+    </blockquote>
+
+    <div class="site-logo">
+      <img
+        class="site-logo__image"
+        src="images/bf-logo.png"
+        alt="BF monogram logo"
+        width="1024"
+        height="1024"
+      >
+    </div>
+  </main>
+
+  <script>
+    function shimmerize(element, text, startIndex = 0) {
+      element.textContent = "";
+      [...text].forEach((char, index) => {
+        const span = document.createElement("span");
+        span.className = "quote__char";
+        span.style.setProperty("--i", startIndex + index);
+        span.textContent = char === " " ? "\u00a0" : char;
+        element.appendChild(span);
+      });
+    }
+
+    const line1 = "Train people well enough so they can leave,";
+    const line2 = "treat them well enough so they don't want to";
+
+    shimmerize(document.getElementById("quote-line-1"), line1, 0);
+    shimmerize(document.getElementById("quote-line-2"), line2, line1.length);
+    shimmerize(
+      document.getElementById("quote-author"),
+      "— Richard Branson"
+    );
+  </script>
 
 </body>
 </html>
